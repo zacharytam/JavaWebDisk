@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<servlet>
+		<servlet-name>DiskServlet</servlet-name>
+		<servlet-class>com.cjg.web.DiskServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DiskServlet</servlet-name>
+		<url-pattern>/DiskServlet.shtml</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>DirServlet</servlet-name>
+		<servlet-class>com.cjg.web.DirServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DirServlet</servlet-name>
+		<url-pattern>/DirServlet.shtml</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ReaderServlet</servlet-name>
+		<servlet-class>com.cjg.web.ReaderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReaderServlet</servlet-name>
+		<url-pattern>/ReaderServlet.shtml</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>WriterServlet</servlet-name>
+		<servlet-class>com.cjg.web.WriterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WriterServlet</servlet-name>
+		<url-pattern>/WriterServlet.shtml</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>OperateServlet</servlet-name>
+		<servlet-class>com.cjg.web.OperateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OperateServlet</servlet-name>
+		<url-pattern>/OperateServlet.shtml</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>QueryServlet</servlet-name>
+		<servlet-class>com.cjg.web.QueryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueryServlet</servlet-name>
+		<url-pattern>/QueryServlet.shtml</url-pattern>
+	</servlet-mapping>
+</web-app>
