@@ -38,7 +38,7 @@ public class DirServlet extends HttpServlet {
 
             out.println("<table align=left border=0 width=700>");
             out.println("<tr>");
-            out.println("<th>Name</th><th>Type</th><th>EditDate</th><th>Operate</th><th>²Ù×÷</th>");
+            out.println("<th>Name</th><th>Type</th><th>Size</th><th>EditDate</th><th>Operate</th>");
             out.println("</tr>");
             for (File f : files) {
                 if (!f.isHidden()) {
