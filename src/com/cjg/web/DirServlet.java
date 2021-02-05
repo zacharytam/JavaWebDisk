@@ -33,9 +33,9 @@ public class DirServlet extends HttpServlet {
             out.println("<input name=query> <input type=submit value=查询>");
             out.println("</form>");
             out.println("<br><br><br>");
-            // 得到根目录下的文件夹及文件
+
             File[] files = FileUtils.fileList(path);
-            // 过滤隐藏文件,并展现
+
             out.println("<table align=left border=0 width=700>");
             out.println("<tr>");
             out.println("<th>名称</th><th>类型</th><th>大小</th><th>修改日期</th><th>操作</th>");
@@ -55,7 +55,7 @@ public class DirServlet extends HttpServlet {
             }
             out.println("</table>");
         } else {
-            response.sendRedirect("DiskServlet.shtml"); // 重新得到根目录
+            response.sendRedirect("DiskServlet.shtml");
         }
         out.println("  </BODY>");
         out.println("</HTML>");
