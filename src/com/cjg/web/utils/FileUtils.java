@@ -10,11 +10,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.Writer;
-// 实现文件操作的工具类
+
 public class FileUtils {
     /**
-     * 得到路径下对应所有的文件及文件夹
-     * 
+     *
+     *
      * @param path
      * @return
      */
@@ -24,8 +24,8 @@ public class FileUtils {
     }
 
     /**
-     * 得到路径下符合条件的文件及文件夹
-     * 
+     *
+     *
      * @param path
      * @param cond
      * @return
@@ -40,8 +40,8 @@ public class FileUtils {
     }
 
     /**
-     * 读取文件
-     * 
+     *
+     *
      * @param path
      * @return
      * @throws IOException
@@ -59,9 +59,9 @@ public class FileUtils {
                 strBuffer.append(strline + "\n");
             }
         } catch (FileNotFoundException e) {
-            throw new FileNotFoundException("文件不能被发现！");
+            throw new FileNotFoundException("Can't find the file");
         } catch (IOException e) {
-            throw new IOException("文件读取中出现了异常！");
+            throw new IOException("Found error when reading file");
         } finally {
             if (breader != null) breader.close();
             if (reader != null) reader.close();
@@ -70,8 +70,8 @@ public class FileUtils {
     }
 
     /**
-     * 写文件
-     * 
+     *
+     *
      * @param path
      * @param content
      * @throws IOException
@@ -87,7 +87,7 @@ public class FileUtils {
             out = new PrintWriter(bwriter);
             out.println(content);
         } catch (IOException e) {
-            throw new IOException("写文件出现了异常！");
+            throw new IOException("Found error when writing file");
         } finally {
             if (out != null) out.close();
             if (bwriter != null) bwriter.close();
@@ -96,8 +96,8 @@ public class FileUtils {
     }
 
     /**
-     * 创建文件
-     * 
+     *
+     *
      * @param path
      * @return
      * @throws IOException
@@ -107,13 +107,13 @@ public class FileUtils {
         try {
             return file.createNewFile();
         } catch (IOException e) {
-            throw new IOException("文件创建失败！");
+            throw new IOException("File creating failed");
         }
     }
 
     /**
-     * 创建多个文件夹
-     * 
+     *
+     *
      * @param path
      * @return
      */
@@ -123,7 +123,7 @@ public class FileUtils {
     }
 
     /**
-     * 更换名称
+     * 
      * 
      * @param oldpath
      * @param newfname
@@ -136,7 +136,7 @@ public class FileUtils {
     }
 
     /**
-     * 删除文件及文件夹
+     *
      * 
      * @param path
      * @return
