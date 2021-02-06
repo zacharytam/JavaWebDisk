@@ -25,7 +25,7 @@ public class WriterServlet extends HttpServlet {
             out.println("<input type=hidden name=path value='" + path + "'>");
             out.println("<input name=type type=radio value=1>File");
             out.println("<input name=type type=radio value=2>Folder");
-            out.println("<br>文件/文件夹名称:<input name=name size=30>");
+            out.println("<br>FileName/FolderName:<input name=name size=30>");
             out.println("<br>");
             out.println("<textarea rows=5 cols=50 name=content></textarea><br>");
             out.println("<input type=submit>");
