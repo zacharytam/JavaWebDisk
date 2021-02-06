@@ -44,7 +44,7 @@ public class QueryServlet extends HttpServlet {
             out.println("Select Search Content");
         } else {
             File[] files = FileUtils.fileList(path, query);
-            // 过滤隐藏文件,并展现
+
             out.println("<table align=left border=0 width=700>");
             out.println("<tr>");
             out.println("<th>Name</th><th>Type</th><th>Size</th><th>EditDate</th><th>Operation</th>");
