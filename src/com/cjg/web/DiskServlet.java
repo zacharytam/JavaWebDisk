@@ -17,11 +17,11 @@ public class DiskServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
         out.println("<HTML>");
-        out.println("  <HEAD><TITLE>服务器磁盘</TITLE></HEAD>");
+        out.println("  <HEAD><TITLE>ServerDisk</TITLE></HEAD>");
         out.println("  <BODY>");
         File[] roots = File.listRoots();
         for (File f : roots) {
-            out.println("<a href='DirServlet.shtml?path=" + f.getAbsolutePath() + "'>服务器磁盘:(" + f.getAbsolutePath() + ")</a>&nbsp;&nbsp;&nbsp;");
+            out.println("<a href='DirServlet.shtml?path=" + f.getAbsolutePath() + "'>ServerDisk:(" + f.getAbsolutePath() + ")</a>&nbsp;&nbsp;&nbsp;");
         }
         out.println("  </BODY>");
         out.println("</HTML>");

@@ -41,24 +41,24 @@ public class QueryServlet extends HttpServlet {
         out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
         out.println("  <BODY leftmargin=50>");
         if (query.equals("")) {
-            out.println("请选择需要查找的内容！");
+            out.println("Select Search Content");
         } else {
             File[] files = FileUtils.fileList(path, query);
             // 过滤隐藏文件,并展现
             out.println("<table align=left border=0 width=700>");
             out.println("<tr>");
-            out.println("<th>名称</th><th>类型</th><th>大小</th><th>修改日期</th><th>操作</th>");
+            out.println("<th>Name</th><th>Type</th><th>Size</th><th>EditDate</th><th>Operation</th>");
             out.println("</tr>");
             for (File f : files) {
                 if (!f.isHidden()) {
                     out.println("<tr>");
                     String url = f.isDirectory() ? "DirServlet.shtml?path=" + f.getAbsolutePath() : "ReaderServlet.shtml?path=" + f.getAbsolutePath();
                     out.print("<td><a href='" + url + "'>" + f.getName() + "</a></td>");
-                    out.print("<td>" + (f.isFile() ? "文件" : "文件夹") + "</td>");
+                    out.print("<td>" + (f.isFile() ? "File" : "Folder") + "</td>");
                     out.println("<td>" + (f.isDirectory() ? "" : (f.length() / 1024) + "KB") + "</td>");
                     out.println("<td>" + new Date(f.lastModified()).toLocaleString() + "</td>");
-                    out.print("<td><a href='OperateServlet.shtml?mtype=delete&path=" + f.getAbsolutePath() + "'>删除</a>&nbsp;&nbsp;&nbsp;");
-                    out.print("<a href='OperateServlet.shtml?mtype=rename&path=" + f.getAbsolutePath() + "'>更名</a></td>");
+                    out.print("<td><a href='OperateServlet.shtml?mtype=delete&path=" + f.getAbsolutePath() + "'>Delete</a>&nbsp;&nbsp;&nbsp;");
+                    out.print("<a href='OperateServlet.shtml?mtype=rename&path=" + f.getAbsolutePath() + "'>Rename</a></td>");
                     out.println("</tr>");
                 }
             }

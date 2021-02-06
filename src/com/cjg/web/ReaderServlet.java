@@ -22,7 +22,7 @@ public class ReaderServlet extends HttpServlet {
         out.println("  <BODY>");
         String path = request.getParameter("path");
         if (path != null && !path.equals("")) {
-            // 将请求的文件内容在网页中展现
+
             String content = FileUtils.readFile(path);
             out.println(StringUtils.filterHTML(content));
         } else {
